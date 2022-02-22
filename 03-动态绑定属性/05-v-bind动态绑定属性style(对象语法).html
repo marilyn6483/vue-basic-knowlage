@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+<style>
+
+</style>
+
+<div id="app">
+    <h2 :style="{fontSize: '40px', }"> {{ message }} </h2>
+</div>
+
+
+<script>
+    /**
+     * style动态绑定的时候， fontSize后面的值需要加上单引号
+     * vue语法解析规则
+     * */
+    const app = new Vue({
+        el: '#app', // 传入字符串 或者Document对象
+        data: {
+            message: 'Hello Vue ',
+        }
+    })
+</script>
+
+</body>
+</html>
