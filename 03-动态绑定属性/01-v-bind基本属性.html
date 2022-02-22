@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+
+<div id="app">
+    <img v-bind:src="imgUrl" alt="">
+</div>
+
+<script>
+    // 用法： v-bind加上冒号 加上属性=属性值
+    // v-bind:attr=""
+    // 语法糖用法：  冒号+属性=属性值  :href="href
+
+    // d
+    const app = new Vue({
+        el: '#app', // 传入字符串 或者Document对象
+        data: {
+            message: 'Hello Vue ',
+            imgUrl: 'https://img11.360buyimg.com/seckillcms/s140x140_jfs/t1/213339/25/12558/109329/620b455dEa67553d3/6efa395dbf30a257.jpg.webp',
+        }
+    })
+</script>
+
+</body>
+</html>

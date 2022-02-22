@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="../js/vue.js"></script>
+
+<div id="app">
+    <h3>当前计数 : {{counter}}</h3>
+
+<!--    <button v-on:click="counter++">+</button>-->
+<!--    <button @click="counter&#45;&#45;">-</button>-->
+    <button v-on:click="add_counter">+</button>
+    <button v-on:click="minus_counter">-</button>
+</div>
+
+
+<script>
+    // 创建vue实例 引用了vue.js就可以使用
+    // src引用的路劲问题 https://blog.csdn.net/qq_21163257/article/details/53035559
+    // 参考博客： https://blog.csdn.net/qq_23073811/article/details/118651507
+    /*
+    *  options {}
+    *  el: vue对象挂在到哪个元素上去
+    * data：一般为数据
+    * */
+
+    const app = new Vue({
+        el: '#app', // 传入字符串 或者Document对象
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString(),
+            counter: 0,
+        }, // 传入对象或者函数  组件中data必须传入一个函数
+        methods: {
+            add_counter: function () {
+                this.counter++;
+            },
+            minus_counter: function () {
+                this.counter++;
+            }
+        }
+    })
+
+</script>
+
+</body>
+</html>

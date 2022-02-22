@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="../js/vue.js"></script>
+<!--v-html指令-->
+
+<div id="app">
+    <h1> {{ message }}</h1>
+    <h2>{{ url }}</h2>
+    <h2 v-html="url"></h2>
+</div>
+
+<script>
+    const app = new Vue({
+        el: '#app', // 传入字符串 或者Document对象
+        data: {
+            message: 'Hello Vue ',
+            url: '<a href="thhp://www.baoidu.com">百度一下</a>',
+
+        }
+    })
+</script>
+
+
+</body>
+</html>

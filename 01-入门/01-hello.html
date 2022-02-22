@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+
+<div id="app">
+    {{ message }}
+</div>
+<div id="app-2">
+    <span v-bind:title="message">
+    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+</span>
+</div>
+
+
+<script>
+    // 创建vue实例 引用了vue.js就可以使用
+    // src引用的路劲问题 https://blog.csdn.net/qq_21163257/article/details/53035559
+    // 参考博客： https://blog.csdn.net/qq_23073811/article/details/118651507
+    /*
+    *  options {}
+    *  el: vue对象挂在到哪个元素上去
+    * data：一般为数据
+    * */
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello Vue!'
+        }
+    })
+
+    const app2 = new Vue({
+        el: '#app-2',
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString()
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="ele in movies">{{ele}}</li>
+        <li>{{movies[1]}}</li>
+    </ul>
+</div>
+
+
+<script>
+    // 创建vue实例 引用了vue.js就可以使用
+    // src引用的路劲问题 https://blog.csdn.net/qq_21163257/article/details/53035559
+    // 参考博客： https://blog.csdn.net/qq_23073811/article/details/118651507
+    /*
+    *  options {}
+    *  el: vue对象挂在到哪个元素上去
+    * data：一般为数据
+    * */
+
+    const app = new Vue({
+        el: '#app',
+        data: {
+            message: '页面加载于 ' + new Date().toLocaleString(),
+            movies: ['星际穿越', '大话西游', '少年派', '盗梦空间'],
+        }
+    })
+</script>
+
+</body>
+</html>
